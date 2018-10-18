@@ -1,4 +1,4 @@
-/*Authors: Eric Schroeder and Ian Neilson
+/*Authors: Eric Schroeder and Ian Neilsen
 Written: October 8, 2018
 Last Updated: October 14,2018*/
 
