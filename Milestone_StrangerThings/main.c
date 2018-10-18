@@ -1,6 +1,6 @@
-/*Authors: Eric Schroeder and Ian Nielsen
+/*Authors: Eric Schroeder and Ian Neilson
 Written: October 8, 2018
-Last Updated: October 15,2018*/
+Last Updated: October 14,2018*/
 
 #define RLED BIT2;
 #define GLED BIT3;
@@ -27,13 +27,12 @@ void initialize_UART(void){
        UCA1IFG &= ~UCRXIFG;    //clears interrupt flags
 }
 void Set_LED(void){
-    P1DIR |= RLED;
-    P1SEL |= RLED;
-    P1DIR |= GLED;
-    P1SEL |= GLED;
-    P1DIR |= BLED;
-    P1SEL |= BLED;
-
+    P1DIR |= RLED;             //sets the RLED direction register to out
+    P1SEL |= RLED;             //
+    P1DIR |= GLED;             //sets the GLED direction register to out
+    P1SEL |= GLED;             //
+    P1DIR |= BLED;             //sets the BLED direction register to out
+    P1SEL |= BLED;             //'
 }
 void Set_PWM(void){
     TA0CTL = TASSEL_2 + MC_1;
@@ -52,7 +51,7 @@ int main(void)
 	initialize_UART();
 	Set_LED();
 	Set_PWM();
-	__bis_SR_register(LPM0_bits + GIE);        // Set low power mode
+	__bis_SR_register(GIE);        // Set low power mode
 	while(1);
 }
 #pragma vector = USCI_A1_VECTOR
@@ -73,7 +72,7 @@ __interrupt void USCI_A1_ISR(void) {
                 UCA1TXBUF = total_bytes - 3;
                 break;
             default:
-                if(byte >= total_bytes){
+                if(byte > total_bytes){
                      byte = -1; }
                 else{
                 while(!(UCA1IFG & UCTXIFG));
