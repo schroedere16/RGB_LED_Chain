@@ -6,25 +6,13 @@ This project creates an addressable RGB LED which can be connected in series wit
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
+## Explination of Code
+
+This section will explain how the program operates. This will include inputs and outputs, timers and PWM.
+
 ## Running the tests
 
 Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
 
 ## Built With
 
