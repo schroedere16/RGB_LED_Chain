@@ -21,7 +21,7 @@ Explain how to run the automated tests for this system
 
 ## Authors
 
-* **Eric Shroeder**
+* **Eric Schroeder**
 * **Ian Nielsen**
 
 ## Acknowledgments
