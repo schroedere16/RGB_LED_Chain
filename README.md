@@ -14,10 +14,13 @@ This program begins by initializing the IO ports, which include the RX input at 
 
 Explain how to run the automated tests for this system
 
+This system was tested using the program Realterm. Within Realterm you can send and recieved UART codes, which is what we did. We send a UART code to the RX port for the desired color output and then checked the resulting output from the TX port to ensure that it was the value we expected, which is the same as the RX signal minus the first three values.
+
 ## Built With
 
 * TI MSP430F5529 microcontroller
 * Code Composer Studio 8.1.0 - MSP430 integrated development environment used
+* Standard breadboard with resistors, wires and RGB LED
 
 ## Authors
 
