@@ -1,3 +1,4 @@
+## The PDF named milestone_1_report.pdf will be used in place of this
 # Milestone 1: Stranger Things Light Wall
 
 This project creates an addressable RGB LED which can be connected in series with another board running the same program to create a pattern of colors based on an input of a specified number of bytes, initially sent to the first board in the series. The result is that the LEDs turn on as the color specified by the input.
